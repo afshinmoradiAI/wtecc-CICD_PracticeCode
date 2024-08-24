@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.9-slim
     steps:
-      - name: {insert step name here}
-        uses: {insert action name here}
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         run: |
@@ -26,5 +26,3 @@ jobs:
 
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-
-
